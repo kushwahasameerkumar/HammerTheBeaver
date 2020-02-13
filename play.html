@@ -10,33 +10,71 @@
 
     <title>Gameplay - Hammer The Beaver</title>
     <style>
+        body{
+            height: 100%;
+            width: 100%;
+            background-image: url("./img/background.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
         .hole{
             width: 200px;
             height: 100px;
         }
         .container{
             cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/happy.png"), auto;	
+            padding: 10% 10%;
+        }
+        .card{
+            background-color: transparent;
+            border-style: none;
+            margin: 10px;
         }
     </style>
     </head>
   <body>
+    <audio autoplay id="gameSound">
+        <source src="./gameSound.mp3" type="audio/mpeg">
+    </audio>
+    <div class="row" style="padding-left:20%;text-align: right;font-size: 30px;font-weight: 1000;padding-top: 40px;color: azure;">
+        Score :&nbsp<span id="score">0</span>
+    </div>
     <div class="container">
         <div class="row">
-            Score: <span id="score">0</span>
+            <div class="card" onclick=hammer(1)>
+                <img src="./img/hole.png" class="card-img-top hole" alt="beaver_hole" id="1">
+            </div>
+            <div class="card" onclick=hammer(2)>
+                <img src="./img/hole.png" class="card-img-top hole" alt="beaver_hole" id="2">
+            </div>
+            <div class="card" onclick=hammer(3)>
+                <img src="./img/hole.png" class="card-img-top hole" alt="beaver_hole" id="3">
+            </div>
+            
         </div>
         <div class="row">
-            <div class="card">
-                <img src="./img/hole.jpg" class="card-img-top hole" alt="beaver_hole" id="11" onclick=hammer(11)>
+            <div class="card" onclick=hammer(4)>
+                <img src="./img/hole.png" class="card-img-top hole" alt="beaver_hole" id="4">
             </div>
-            <div class="card">
-                <img src="./img/hole.jpg" class="card-img-top hole" alt="beaver_hole" id="12" onclick=hammer(12)>
+            <div class="card" onclick=hammer(5)>
+                <img src="./img/hole.png" class="card-img-top hole" alt="beaver_hole" id="5">
             </div>
-            <div class="card">
-                <img src="./img/hole.jpg" class="card-img-top hole" alt="beaver_hole" id="13" onclick=hammer(13)>
+            <div class="card" onclick=hammer(6)>
+                <img src="./img/hole.png" class="card-img-top hole" alt="beaver_hole" id="6">
             </div>
-            <div class="card">
-                <img src="./img/hole.jpg" class="card-img-top hole" alt="beaver_hole" id="14" onclick=hammer(14)>
+            
+        </div>
+        <div class="row">
+            <div class="card" onclick=hammer(7)>
+                <img src="./img/hole.png" class="card-img-top hole" alt="beaver_hole" id="7">
             </div>
+            <div class="card" onclick=hammer(8)>
+                <img src="./img/hole.png" class="card-img-top hole" alt="beaver_hole" id="8">
+            </div>
+            <div class="card" onclick=hammer(9)>
+                <img src="./img/hole.png" class="card-img-top hole" alt="beaver_hole" id="9">
+            </div>
+            
         </div>
     </div>
 
